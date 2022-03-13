@@ -1,6 +1,10 @@
 <template>
   <div class="navbar">
-    <logo />
+    <div class="logo-container">
+      <router-link class="logo-link" to="/">
+        <img v-if="logo" :src="logo" class="logo">
+      </router-link>
+    </div>
     <div class="right-menu">
       <template v-if="device!=='mobile'">
         <search id="header-search" class="right-menu-item" />
@@ -36,12 +40,16 @@
 <script>
 import { mapGetters } from 'vuex'
 import Search from '@/components/HeaderSearch'
-import Logo from '@/components/Logo'
 
 export default {
   components: {
-    Search,
-    Logo
+    Search
+  },
+  data() {
+    return {
+      title: 'moco',
+      logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+    }
   },
   computed: {
     ...mapGetters([
@@ -68,9 +76,23 @@ export default {
   overflow: hidden;
   position: relative;
   background: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  .logo-container {
+    align-self: center;
+    margin-left: 20px;
+
+    .logo-link {
+      height: 100%;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+    }
+  }
 
   .right-menu {
-    float: right;
     height: 100%;
     line-height: 50px;
 

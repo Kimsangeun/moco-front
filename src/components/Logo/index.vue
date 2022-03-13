@@ -35,10 +35,6 @@ export default {
   .logo {
     width: 32px;
     height: 32px;
-    vertical-align: middle;
-  }
-  .logo-title {
-
   }
 }
 </style>
