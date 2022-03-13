@@ -40,6 +40,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import Search from '@/components/HeaderSearch'
+import logo from '@/assets/moco-logo.png'
 
 export default {
   components: {
@@ -48,7 +49,7 @@ export default {
   data() {
     return {
       title: 'moco',
-      logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+      logo: logo
     }
   },
   computed: {
@@ -87,8 +88,7 @@ export default {
       height: 100%;
     }
     .logo {
-      width: 32px;
-      height: 32px;
+      height: 36px;
     }
   }
 
