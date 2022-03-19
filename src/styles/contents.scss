@@ -1,0 +1,51 @@
+.party-list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  .party-card {
+    width: 50%;
+
+    .el-card {
+      margin: 10px;
+    }
+
+    .party-card-header {
+      display: flex;
+      align-items: center;
+      height: 30px;
+
+      .status {
+        flex-shrink: 0;
+        width: 75px;
+      }
+      .title {
+        flex-grow: 1;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.status-icon {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: none;
+  font-weight: 600;
+  font-size: 13px;
+
+  &.status-a { background: #9afc9e; }
+  &.status-b { background: #ffff8d; }
+  &.status-c { background: #ffa8a8; }
+}
+
+.tag-icon {
+
+}
+
+@media (max-width: 900px) {
+  .party-list-wrap {
+    .party-card {
+      width: 100%;
+    }
+  }
+}
