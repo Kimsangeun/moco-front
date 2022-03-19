@@ -52,15 +52,11 @@ export default {
     position: relative;
     height: 100%;
     width: 100%;
-
-    &.mobile.openSidebar {
-      position: fixed;
-      top: 0;
-    }
   }
 
   .main-container {
     max-width: 1200px;
+    margin: 0 auto 0;
   }
   .drawer-bg {
     background: #000;
