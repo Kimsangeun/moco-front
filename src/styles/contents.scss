@@ -19,6 +19,10 @@
 
     .el-card {
       margin: 10px;
+      cursor: pointer;
+      &:hover {
+
+      }
     }
 
     .party-card-header {
@@ -28,7 +32,8 @@
 
       .status {
         flex-shrink: 0;
-        width: 70px;
+        width: 60px;
+        text-align: right;
       }
       .title {
         flex-grow: 1;
@@ -51,10 +56,10 @@
       margin-bottom: 10px;
 
       div:nth-child(1) {
-        width: 60px;
+        width: 40px;
       }
       div:nth-child(2) {
-        min-width: 150px;
+        min-width: 95px;
       }
     }
   }
