@@ -1,6 +1,18 @@
+.search-wrap {
+  margin: 10px;
+  display: flex;
+  .search-input {
+    max-width: 980px;
+    margin: 0 auto 0;
+
+  }
+}
+
 .party-list-wrap {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 0;
 
   .party-card {
     width: 50%;
@@ -12,37 +24,55 @@
     .party-card-header {
       display: flex;
       align-items: center;
-      height: 30px;
+      height: 0px;
 
       .status {
         flex-shrink: 0;
-        width: 75px;
+        width: 70px;
       }
       .title {
         flex-grow: 1;
         font-weight: 600;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .list-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    .list-item {
+      display: flex;
+      flex: 1 1 40%;
+      margin-bottom: 10px;
+
+      div:nth-child(1) {
+        width: 60px;
+      }
+      div:nth-child(2) {
+        min-width: 150px;
       }
     }
   }
 }
 
 .status-icon {
-  padding: 5px 10px;
-  border-radius: 10px;
-  cursor: none;
-  font-weight: 600;
-  font-size: 13px;
-
-  &.status-a { background: #9afc9e; }
-  &.status-b { background: #ffff8d; }
-  &.status-c { background: #ffa8a8; }
+  cursor: default;
 }
 
-.tag-icon {
-
+.tag-wrap {
+  .tag-icon {
+    cursor: default;
+    margin-right: 10px;
+  }
 }
 
-@media (max-width: 900px) {
+
+@media (max-width: 800px) {
   .party-list-wrap {
     .party-card {
       width: 100%;
